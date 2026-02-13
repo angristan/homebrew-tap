@@ -1,6 +1,6 @@
 # Homebrew Tap
 
-Homebrew formulae and casks for [angristan](https://github.com/angristan) projects.
+Homebrew formulae and casks for my projects.
 
 ## Usage
 

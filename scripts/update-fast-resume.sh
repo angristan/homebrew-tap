@@ -36,8 +36,10 @@ class FastResume < Formula
   end
 
   def install
-    bin.install "fr"
-    bin.install_symlink "fr" => "fast-resume"
+    libexec.install "_internal"
+    libexec.install "fr"
+    bin.install_symlink libexec/"fr"
+    bin.install_symlink libexec/"fr" => "fast-resume"
   end
 
   test do

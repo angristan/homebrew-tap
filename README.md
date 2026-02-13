@@ -13,4 +13,5 @@ brew tap angristan/tap
 | Name | Type | Description | Install |
 |---|---|---|---|
 | [fast-resume](https://github.com/angristan/fast-resume) | Formula | Fuzzy finder for coding agent session history | `brew install fast-resume` |
+| [hue-tui](https://github.com/angristan/hue-tui) | Formula | Terminal UI for controlling Philips Hue lights | `brew install hue-tui` |
 | [macthrottle](https://github.com/angristan/MacThrottle) | Cask | Menu bar app that monitors thermal throttling | `brew install --cask macthrottle` |

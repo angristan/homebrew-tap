@@ -1,6 +1,6 @@
 cask "macthrottle" do
-  version "1.7.2"
-  sha256 "e7fbdccdd22d800948f7688f52766dbc164724a5ec38c1f1245f1bd99dafc9b4"
+  version "1.7.3"
+  sha256 "8bf76d8c94af5e70d12929cd81abf7396096cd5d288e74a724c0d7e727053cc6"
 
   url "https://github.com/angristan/MacThrottle/releases/download/v#{version}/MacThrottle-#{version}.dmg"
   name "MacThrottle"
@@ -9,14 +9,12 @@ cask "macthrottle" do
 
   depends_on macos: ">= :sequoia"
 
+  app "MacThrottle.app"
+
   preflight do
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{staged_path}/MacThrottle.app"]
   end
 
-  app "MacThrottle.app"
-
-  zap trash: [
-    "~/Library/Preferences/com.macthrottle.app.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.macthrottle.app.plist"
 end

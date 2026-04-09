@@ -12,6 +12,9 @@ on:
         description: "Version (e.g. 1.7.3)"
         required: true
 
+permissions:
+  contents: write
+
 jobs:
   update:
     name: Update ${{ github.event.client_payload.formula || inputs.formula }}

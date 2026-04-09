@@ -3,18 +3,26 @@ name: Update Formula
 on:
   repository_dispatch:
     types: [update-formula]
+  workflow_dispatch:
+    inputs:
+      formula:
+        description: "Formula name (e.g. macthrottle)"
+        required: true
+      version:
+        description: "Version (e.g. 1.7.3)"
+        required: true
 
 jobs:
   update:
-    name: Update ${{ github.event.client_payload.formula }}
+    name: Update ${{ github.event.client_payload.formula || inputs.formula }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
 
       - name: Update formula
         run: |
-          FORMULA="${{ github.event.client_payload.formula }}"
-          VERSION="${{ github.event.client_payload.version }}"
+          FORMULA="${{ github.event.client_payload.formula || inputs.formula }}"
+          VERSION="${{ github.event.client_payload.version || inputs.version }}"
 
           echo "Updating ${FORMULA} to ${VERSION}"
 
@@ -23,8 +31,8 @@ jobs:
 
       - name: Commit and push
         run: |
-          FORMULA="${{ github.event.client_payload.formula }}"
-          VERSION="${{ github.event.client_payload.version }}"
+          FORMULA="${{ github.event.client_payload.formula || inputs.formula }}"
+          VERSION="${{ github.event.client_payload.version || inputs.version }}"
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

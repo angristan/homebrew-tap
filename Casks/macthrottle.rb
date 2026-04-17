@@ -9,14 +9,12 @@ cask "macthrottle" do
 
   depends_on macos: ">= :sequoia"
 
+  app "MacThrottle.app"
+
   preflight do
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{staged_path}/MacThrottle.app"]
   end
 
-  app "MacThrottle.app"
-
-  zap trash: [
-    "~/Library/Preferences/com.macthrottle.app.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.macthrottle.app.plist"
 end

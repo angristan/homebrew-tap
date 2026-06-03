@@ -1,20 +1,20 @@
 class FastResume < Formula
   desc "Fuzzy finder for coding agent session history"
   homepage "https://github.com/angristan/fast-resume"
-  version "1.17.3"
+  version "1.18.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/angristan/fast-resume/releases/download/v#{version}/fast-resume-#{version}-macos-arm64.tar.gz"
-      sha256 "487afb37733690c145f7ccee37ea265a1ad6bbbe8bc4dda728d8a83b09f55746"
+      sha256 "711aada0c62aa8122aac85ec5a9d566e148fb801f4e369f1e4a2332f61163d68"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/angristan/fast-resume/releases/download/v#{version}/fast-resume-#{version}-linux-x86_64.tar.gz"
-      sha256 "a8963ad4cce94481ce8c258986ca7f8bf3cb825c0fab2fe6c89721be4401ddfd"
+      sha256 "8925b49d5059849cd4e0b1968841de96f53c4cd3bd79871812ceee29b9281c23"
     end
   end
 

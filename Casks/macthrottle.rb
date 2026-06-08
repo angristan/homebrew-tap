@@ -7,7 +7,7 @@ cask "macthrottle" do
   desc "Menu bar app that monitors thermal throttling"
   homepage "https://github.com/angristan/MacThrottle"
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   preflight do
     system_command "/usr/bin/xattr",

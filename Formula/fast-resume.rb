@@ -19,13 +19,19 @@ class FastResume < Formula
   end
 
   def install
-    libexec.install "_internal"
-    libexec.install "fr"
-    bin.install_symlink libexec/"fr"
-    bin.install_symlink libexec/"fr" => "fast-resume"
+    if (buildpath/"fr/fr").exist?
+      bin.install "fr/fr"
+      bin.install_symlink bin/"fr" => "fast-resume"
+    else
+      libexec.install "_internal"
+      libexec.install "fr"
+      bin.install_symlink libexec/"fr"
+      bin.install_symlink libexec/"fr" => "fast-resume"
+    end
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/fr --version")
+    assert_match version.to_s, shell_output("#{bin}/fast-resume --version")
   end
 end

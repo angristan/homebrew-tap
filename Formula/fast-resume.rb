@@ -3,6 +3,7 @@ class FastResume < Formula
   homepage "https://github.com/angristan/fast-resume"
   version "2.0.0"
   license "MIT"
+  revision 1
 
   on_macos do
     on_arm do
@@ -29,15 +30,8 @@ class FastResume < Formula
   end
 
   def install
-    if (buildpath/"fr/fr").exist?
-      bin.install "fr/fr"
-      bin.install_symlink bin/"fr" => "fast-resume"
-    else
-      libexec.install "_internal"
-      libexec.install "fr"
-      bin.install_symlink libexec/"fr"
-      bin.install_symlink libexec/"fr" => "fast-resume"
-    end
+    bin.install "fr"
+    bin.install_symlink bin/"fr" => "fast-resume"
   end
 
   test do

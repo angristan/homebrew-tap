@@ -1,6 +1,6 @@
 cask "macthrottle" do
-  version "1.8.2"
-  sha256 "6de770bb51acdae3d4d8273a53c32322e210cbd33acce9b944379fea77e38111"
+  version "1.8.3"
+  sha256 "547a98d59efbc4784b487464558c2ef9016d7253780469d62ff32d2eaa399b60"
 
   url "https://github.com/angristan/MacThrottle/releases/download/v#{version}/MacThrottle-#{version}.dmg"
   name "MacThrottle"

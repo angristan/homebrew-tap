@@ -1,7 +1,7 @@
 class Ncda < Formula
   desc "Terminal monitor for live Linux file I/O with ncdu-like navigation"
   homepage "https://github.com/angristan/ncda"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   depends_on :linux
@@ -9,12 +9,12 @@ class Ncda < Formula
   on_linux do
     on_arm do
       url "https://github.com/angristan/ncda/releases/download/v#{version}/ncda-#{version}-linux-arm64.tar.gz"
-      sha256 "50cc3175ad67397a811eed9dceb2f4b62b1f0e473d31bd5cf4a048feb51f1f35"
+      sha256 "26dc0525c2541a0e0a2b49892b9229a6ef7e283c844ee1befdfdd36d0b1a5429"
     end
 
     on_intel do
       url "https://github.com/angristan/ncda/releases/download/v#{version}/ncda-#{version}-linux-x86_64.tar.gz"
-      sha256 "a48a76552fb2c83a9ce9b1dc20a2e4f2ed8d18eac289791e62057acf3d9e3259"
+      sha256 "8316154f8371e48cc248bdc3d7a91de572fb91bc0049a9f0b516aa6f2025b860"
     end
   end
 

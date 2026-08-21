@@ -1,5 +1,5 @@
 class Ncda < Formula
-  desc "An ncdu-like terminal monitor for live Linux file I/O"
+  desc "Terminal monitor for live Linux file I/O with ncdu-like navigation"
   homepage "https://github.com/angristan/ncda"
   version "1.0.0"
   license "MIT"

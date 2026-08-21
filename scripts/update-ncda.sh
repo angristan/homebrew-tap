@@ -21,7 +21,7 @@ linux_arm64_sha=$(sha_for linux-arm64)
 
 cat >"$formula" <<EOF
 class Ncda < Formula
-  desc "An ncdu-like terminal monitor for live Linux file I/O"
+  desc "Terminal monitor for live Linux file I/O with ncdu-like navigation"
   homepage "https://github.com/${repo}"
   version "${version}"
   license "MIT"

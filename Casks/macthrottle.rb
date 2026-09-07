@@ -9,9 +9,8 @@ cask "macthrottle" do
 
   depends_on macos: :sequoia
 
-  preflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{staged_path}/MacThrottle.app"]
+  preflight_steps do
+    run "xattr", args: ["-cr", "{{staged_path}}/MacThrottle.app"]
   end
 
   app "MacThrottle.app"

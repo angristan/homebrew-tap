@@ -1,30 +1,30 @@
 class FastResume < Formula
   desc "Fuzzy finder for coding agent session history"
   homepage "https://github.com/angristan/fast-resume"
-  version "2.13.1"
+  version "2.13.2"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/angristan/fast-resume/releases/download/v#{version}/fast-resume-#{version}-macos-arm64.tar.gz"
-      sha256 "50ff22aaf1cb541083892e9e190a5be62717932dd80dc133fd577b3cf158b825"
+      sha256 "f2fe115bd5fca3c6468fe757a8a13fbba2665402f8b5225cc2cda038fe0d8bcb"
     end
 
     on_intel do
       url "https://github.com/angristan/fast-resume/releases/download/v#{version}/fast-resume-#{version}-macos-x86_64.tar.gz"
-      sha256 "e07719848de5379303e57356b370c46bb0ce3c119b9020e222f8a57a795ccc4d"
+      sha256 "8447a9c9b950c815ba4f4d34f95250ee5e0f5af697f4fc9c9fa889d62d87fc2f"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/angristan/fast-resume/releases/download/v#{version}/fast-resume-#{version}-linux-arm64.tar.gz"
-      sha256 "cadda4b9c74448b106265ce8441d83d0b93d43ba1bc4ab0ed5cea42050d25fcd"
+      sha256 "4ae8a01f258dec811bd66fa9033d260b3a6766ad33814093ca5267bddcd03074"
     end
 
     on_intel do
       url "https://github.com/angristan/fast-resume/releases/download/v#{version}/fast-resume-#{version}-linux-x86_64.tar.gz"
-      sha256 "0ed6e64cef598601bbb775624764d9e349545f6409bd73eb4ea26550fce9b090"
+      sha256 "2cf5bd1f8239b32687517e7fbee46c20a06a0cc377c7e4a2af2a3e280e93142f"
     end
   end
 
